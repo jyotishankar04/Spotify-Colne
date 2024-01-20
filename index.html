@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xm" href="./Assets/spotify.svg">
+  <link rel="stylesheet" href="./output.css" />
+  <link rel="stylesheet" href="./scrollBar.css">
+  <title>Spotify</title>
+</head> 
+
+<body class="bg-black flex gap-[10px] m-2 font-[Circular-std-black] text-gray-200 ">
+  <!-- ! Side bar part -->
+  <div class="left w-[20%] h-[calc(100vh-1rem)] flex gap-2 flex-col justify-start rounded-lg">
+    <!-- Sidebar top part -->
+    <div class="leftTop bg-[#121212] rounded-lg h-[160px] p-[20px] ">
+      <div class="leftLogo py-[1rem]"><img src="./Assets/logo.svg" "  /></div>
+        <div class=" leftMenuBtn text-sm">
+        <ul class="text-white">
+          <li>
+            <a href="#Home " class="flex gap-3 py-[10px] pl-[5px] items-center"><img src="./Assets/home.svg"
+                class="w-[20px]" />Home</a>
+          </li>
+          <li>
+            <a href="#Search " class="flex gap-3 py-[10px] pl-[5px] items-center"><img src="./Assets/search.svg"
+                class="w-[20px]" />Search</a>
+            </li=>
+        </ul>
+      </div>
+    </div>
+    <!-- !Side bar bottom part -->
+    <div class="leftBotton flex-grow flex flex-col rounded-lg relative bg-[#121212] ">
+      <!-- Your Librery part -->
+      <div class="yourLibrery flex-grow ">
+        <h1 class="flex gap-5 p-[10px] "><img src="./Assets/library.svg" >Your Librery</h1>
+        <div class="songList h-[calc(100vh-160px-1rem-53px-70px)] overflow-y-scroll flex flex-col gap-3 py-1 px-[5px]">
+          <!-- !Each songs are listed here -->
+          <ul class="flex flex-col gap-2">
+          
+          <!--! ALl songs will be here  -->
+
+
+          </ul>
+          <!-- ! -->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!--! Right part start -->
+  <div class="right w-[80%] bg-[#121212] h-[calc(100vh-1rem)] rounded-lg relative" >
+    <!--! Right top part --> 
+    <div class="rightTop flex px-[40px] justify-between items-center w-[100%] bg-[#121212] h-[60px] rounded-lg">
+      <!-- ! nav next prev buttons -->
+      <div class="topNavBtns flex items-center gap-3">
+        <img src="./Assets/navPrev.svg" class="bg-[#000] p-[5px] rounded-full flex justify-center items-center cursor-pointer hover:bg-[#232323]">
+        <img src="./Assets/navNext.svg"  class="bg-[#000] p-[5px] rounded-full flex justify-center items-center cursor-pointer hover:bg-[#232323]">
+      </div>
+      <!-- ! Nav loging buttons -->
+      <div class="navLog flex gap-6 items-center">
+        <button class="hover:bg-white  hover:text-gray-800 font-bold py-[7px] px-[10px] hover:rounded-full">Log in</button>
+        <button class="bg-white text-gray-800 font-bold py-[7px] px-[10px] rounded-full hover:bg-black hover:text-white">Sign in</button>
+      </div>
+    </div>
+    <div class="rightHero w-[100%] h-[calc(100vh-60px-1rem-70px)] rounded-lg bg-gradient-to-b from-[#1e1e1e] via-[#121212] to-[#121212] p-[15px] flex flex-wrap gap-5 overflow-y-scroll ">
+      
+      <!--! Cards start  -->
+     
+    
+  </div>
+    
+
+
+
+
+
+
+
+    </div>
+    <!--! Play bar start -->
+          <div class="palyBar left-[50%] translate-x-[-50%] w-[100%] flex flex-col items-center justify-evenly m-auto h-[70px] fixed bottom-[0px] bg-black rounded-xl">
+            
+            <div class="flex  items-center w-[100%] px-[30px]">
+              <div class="songNameStatus flex items-center font-sans text-xl uppercase basis-[40%]">
+                Loading....
+              </div>
+              <div class="playBarButtons flex justify-center pt-[10px] gap-5">
+              <img src="./Assets/previous.svg" class="cursor-pointer playPrev" >
+              <img src="./Assets/play.svg" class="cursor-pointer playPause">
+              <img src="./Assets/next.svg" class="cursor-pointer playNext">
+              <div id="audioCurrentTime"><span id="audioCurrentTimeMinute">0.00</span></div>
+              <div id="audioDuratin">/<span id="audioDuratinMinute">0.00</span></div>
+              </div>
+        
+            </div>
+            <!-- !seekbar start -->
+            <div class="seekbar w-[90%] h-[5px] rounded-xl cursor-pointer bg-[#4D4D4D] relative">
+              <div id="seekbarRound" class=" w-[10px] h-[10px] bg-green-600 absolute translate-y-[-50%] top-[50%] rounded-full left-[0%] cursor-pointer  ease-in">
+
+              </div>
+            </div>
+          </div>
+  </div>
+</body>
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+</html>
