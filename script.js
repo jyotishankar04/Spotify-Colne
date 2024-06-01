@@ -30,7 +30,7 @@ let songName;
 
 // !
 async function getSongs() {
-  let a = await fetch("http://127.0.0.1:5500/dist/musics");
+  let a = await fetch("http://127.0.0.1:5500/musics");
 
   let response = await a.text();
   //   console.log(response);
